@@ -1,7 +1,7 @@
 #ifndef HASHMAP_H
 #define HASHMAP_H
 
-template<class K, class T>
+template<class T>
 class ArbolBinario {
 private:
 
@@ -10,11 +10,11 @@ public:
     ArbolBinario();
 
 
-    void put(K clave, T dato);
+    void put(T dato);
 
-    T search(K clave);
+    T search(T dato);
 
-    void remove(K clave);
+    void remove(T dato);
 
     void preorder();
 
@@ -26,21 +26,23 @@ public:
 
     bool esVacio();
 
+    void print();
+
 };
 /**
  * Constructor del Arbol
  * @tparam K Clave por la cual va a ordenar el árbol
  * @tparam T Valor guardado por el árbol
  */
-template<class K, class T>
-ArbolBinario<K, T>::ArbolBinario() {
+template<class T>
+ArbolBinario<T>::ArbolBinario() {
 
 }
 /**
  * Destructor del Arbol
  */
-template<class K, class T>
-ArbolBinario<K, T>::~ArbolBinario() {
+template<class T>
+ArbolBinario<T>::~ArbolBinario() {
 
 }
 
@@ -50,8 +52,8 @@ ArbolBinario<K, T>::~ArbolBinario() {
  * @param clave Valor a buscar
  * @return el valor buscado
  */
-template<class K, class T>
-T ArbolBinario<K, T>::search(K clave) {
+template< class T>
+T ArbolBinario<T>::search(T dato) {
     T temp;
     return temp;
 }
@@ -61,8 +63,8 @@ T ArbolBinario<K, T>::search(K clave) {
  * @param clave Clave para agregar el dato
  * @param dato Dato a agregar
  */
-template<class K, class T>
-void ArbolBinario<K, T>::put(K clave, T dato) {
+template<class T>
+void ArbolBinario< T>::put( T dato) {
 
 }
 
@@ -70,8 +72,8 @@ void ArbolBinario<K, T>::put(K clave, T dato) {
  * Elimina un dato del árbol
  * @param clave Clave para identificar el nodo a borrar
  */
-template<class K, class T>
-void ArbolBinario<K, T>::remove(K clave) {
+template<class T>
+void ArbolBinario<T>::remove(T dato) {
 
 }
 
@@ -79,16 +81,16 @@ void ArbolBinario<K, T>::remove(K clave) {
  * Informa si un árbol esta vacío
  * @return
  */
-template<class K, class T>
-bool ArbolBinario<K, T>::esVacio() {
+template<class T>
+bool ArbolBinario<T>::esVacio() {
     return false;
 }
 
 /**
  * Recorre un árbol en preorden
  */
-template<class K, class T>
-void ArbolBinario<K, T>::preorder() {
+template< class T>
+void ArbolBinario<T>::preorder() {
 
 }
 
@@ -96,8 +98,8 @@ void ArbolBinario<K, T>::preorder() {
 /**
  * Recorre un árbol en orden
  */
-template<class K, class T>
-void ArbolBinario<K, T>::inorder() {
+template<class T>
+void ArbolBinario<T>::inorder() {
 
 }
 
@@ -105,8 +107,16 @@ void ArbolBinario<K, T>::inorder() {
 /**
  * Recorre un árbol en postorden
  */
-template<class K, class T>
-void ArbolBinario<K, T>::postorder() {
+template<class T>
+void ArbolBinario<T>::postorder() {
+
+}
+
+/**
+ * Muestra un árbol por consola
+ */
+template<class T>
+void ArbolBinario<T>::print() {
 
 }
 

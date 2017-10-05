@@ -4,28 +4,28 @@
 
 using namespace std;
 
-ArbolBinario<int, string> *miArbol;
+ArbolBinario<string> *miArbol;
 
 TEST(test_ArbolBinario, nuevaTablaVacia) {
-    miArbol = new ArbolBinario<int, string>();
+    miArbol = new ArbolBinario<string>();
     EXPECT_EQ(miArbol->esVacio(), true);
 }
 
 TEST(test_ArbolBinario, agregoTres_noVacia) {
-    miArbol->put(3,"Tres");
-    miArbol->put(2,"Dos");
-    miArbol->put(1,"Uno");
+    miArbol->put("Tres");
+    miArbol->put("Dos");
+    miArbol->put("Uno");
     EXPECT_EQ(miArbol->esVacio(), false);
 }
 
 TEST(test_ArbolBinario, obtengoDato) {
-    EXPECT_EQ(miArbol->search(3), "Tres");
-    EXPECT_EQ(miArbol->search(2), "Dos");
-    EXPECT_EQ(miArbol->search(1), "Uno");
-    EXPECT_ANY_THROW(miArbol->search(4));
+    EXPECT_EQ(miArbol->search("Tres"), "Tres");
+    EXPECT_EQ(miArbol->search("Dos"), "Dos");
+    EXPECT_EQ(miArbol->search("Uno"), "Uno");
+    EXPECT_ANY_THROW(miArbol->search("Cuatro"));
 }
 
 TEST(test_ArbolBinario, borroDato) {
-    EXPECT_NO_THROW(miArbol->remove(3));
-    EXPECT_ANY_THROW(miArbol->remove(3)) << "Remover no tira exepción";
+    EXPECT_NO_THROW(miArbol->remove("Tres"));
+    EXPECT_ANY_THROW(miArbol->remove("Tres")) << "Remover no tira exepción";
 }
