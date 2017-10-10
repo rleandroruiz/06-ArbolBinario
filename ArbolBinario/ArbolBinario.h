@@ -1,14 +1,14 @@
 #ifndef HASHMAP_H
 #define HASHMAP_H
 
+#include "NodoArbol.h"
+
 template<class T>
 class ArbolBinario {
 private:
 
-
 public:
     ArbolBinario();
-
 
     void put(T dato);
 
@@ -29,6 +29,8 @@ public:
     void print();
 
 };
+
+
 /**
  * Constructor del Arbol
  * @tparam K Clave por la cual va a ordenar el árbol
@@ -38,6 +40,8 @@ template<class T>
 ArbolBinario<T>::ArbolBinario() {
 
 }
+
+
 /**
  * Destructor del Arbol
  */
@@ -46,17 +50,19 @@ ArbolBinario<T>::~ArbolBinario() {
 
 }
 
+
 /**
  * Busca un dato en el árbol. Si no esta el dato en el árbol
  * tira una excepción
  * @param clave Valor a buscar
  * @return el valor buscado
  */
-template< class T>
+template<class T>
 T ArbolBinario<T>::search(T dato) {
     T temp;
     return temp;
 }
+
 
 /**
  * Agrega un dato al árbol
@@ -64,9 +70,10 @@ T ArbolBinario<T>::search(T dato) {
  * @param dato Dato a agregar
  */
 template<class T>
-void ArbolBinario< T>::put( T dato) {
+void ArbolBinario<T>::put(T dato) {
 
 }
+
 
 /**
  * Elimina un dato del árbol
@@ -77,6 +84,7 @@ void ArbolBinario<T>::remove(T dato) {
 
 }
 
+
 /**
  * Informa si un árbol esta vacío
  * @return
@@ -86,10 +94,11 @@ bool ArbolBinario<T>::esVacio() {
     return false;
 }
 
+
 /**
  * Recorre un árbol en preorden
  */
-template< class T>
+template<class T>
 void ArbolBinario<T>::preorder() {
 
 }
@@ -112,6 +121,7 @@ void ArbolBinario<T>::postorder() {
 
 }
 
+
 /**
  * Muestra un árbol por consola
  */
@@ -119,5 +129,6 @@ template<class T>
 void ArbolBinario<T>::print() {
 
 }
+
 
 #endif //HASHMAP_H
